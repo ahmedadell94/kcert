@@ -43,6 +43,9 @@ spec:
         - name: ACME__EMAIL
           # Your email address for Let's Encrypt and email notifications
           value: {{ required "acmeEmail is required" .Values.acmeEmail }}
+        - name: CHALLENGEINGRESS__CLASSNAME
+          # Challenge Ingress className (default is nginx)
+          value: {{ required "challengeIngress.className is required" .Values.challengeIngress.className}}
 {{- if .Values.smtp.host }}
         - name: SMTP__EMAILFROM
           value: {{ required "smtp.email is required" .Values.smtp.email }}

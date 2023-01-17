@@ -27,5 +27,8 @@ names:
   service: kcert
   app: kcert
 
+challengeIngress:
+  className: nginx
+
 # Set this to false in order to generate a plain yaml template without the Helm custom labels
 forHelm: true
